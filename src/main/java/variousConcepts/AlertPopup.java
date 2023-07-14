@@ -28,11 +28,11 @@ public class AlertPopup {
 	//http://mail.redfill.com/ cgi-bin//login.cgi
 	public void testAleart() throws InterruptedException {
 	driver.findElement(By.xpath("//input[@name='proceed']")).click();//click on the signin button	
-	Thread.sleep(2000);//the popup will stay for the given time
+	//the popup will stay for the given time
 	String alertMsg=driver.switchTo().alert().getText();//get Text method returns the string so we are converting everthing to string
 	System.out.println(alertMsg);
 	driver.switchTo().alert().accept();//if you do .accept first popup will go away and it can't do gettext.
-		
+	Thread.sleep(2000);	
 	}
 	
 	
